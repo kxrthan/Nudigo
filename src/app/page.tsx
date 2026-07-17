@@ -20,7 +20,7 @@ export default async function Home() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col bg-background selection:bg-black/10">
+    <main className="min-h-screen flex flex-col bg-background selection:bg-black/10 overflow-x-hidden w-full max-w-[100vw]">
       <Navbar user={user} profile={profile} />
       <Hero isLoggedIn={!!user} />
       <DashboardPreview />
