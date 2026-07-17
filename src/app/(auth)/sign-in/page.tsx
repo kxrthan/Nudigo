@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,10 +12,8 @@ export default async function SignInPage(props: { searchParams: Promise<{ messag
       
       {/* Brand/Logo */}
       <Link href="/" className="flex items-center gap-3 group w-fit">
-        <div className="w-8 h-8 rounded bg-black flex items-center justify-center transition-transform group-hover:scale-105">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 22H22L12 2Z" fill="white"/>
-          </svg>
+        <div className="w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
+          <Image src="/logo.png" alt="Nudigo Logo" width={40} height={40} className="w-full h-full object-contain drop-shadow-sm" priority />
         </div>
         <span className="font-bold text-xl tracking-tighter text-black">Nudigo</span>
       </Link>
