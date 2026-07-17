@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Hero() {
+export function Hero({ isLoggedIn }: { isLoggedIn?: boolean }) {
   return (
     <section className="pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden relative bg-[#FAFAFA]">
       {/* Abstract Animated Glows */}
@@ -37,15 +37,13 @@ export function Hero() {
           
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Link href="/sign-up">
+              <Link href={isLoggedIn ? "/dashboard" : "/sign-up"}>
                 <Button size="lg" className="h-14 px-8 text-base font-medium rounded-xl shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 transition-all bg-black text-white group">
-                  Start for free
+                  {isLoggedIn ? "Continue building" : "Start building"}
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="h-14 px-8 text-base font-medium rounded-xl bg-white text-black border-2 border-black/10 hover:border-black/20 hover:bg-black/5 transition-colors">
-                Book a demo
-              </Button>
+
             </div>
           </div>
 

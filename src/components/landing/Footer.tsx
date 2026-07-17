@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import profileImg from "@/assets/Profile-img (1).jpg";
 
 export function Footer() {
   return (
@@ -17,54 +18,42 @@ export function Footer() {
             <p className="text-black/60 mb-8 max-w-xs text-sm leading-relaxed">
               The ultimate toolkit to convert bouncing visitors into paying customers. Stop losing money on ads today.
             </p>
-            <div className="flex gap-4">
-               {/* Social Icons (Abstract) */}
-               <div className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-black/60 hover:text-black hover:border-black transition-colors cursor-pointer">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-               </div>
-               <div className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-black/60 hover:text-black hover:border-black transition-colors cursor-pointer">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.8c0-1.2-.4-2.4-1.2-3.2 3.4-.4 7-1.7 7-7.2 0-1.6-.6-3-1.5-4-.2-.5-1.3-2-.1-4 0 0 1.2 0 4 3 1.1-.3 2.3-.3 3.5-.3s2.4.1 3.5.3c2.8-3 4-3 4-3 1.2 2 1.1 3.5.9 4 1 1 1.5 2.4 1.5 4 0 5.5-3.6 6.8-7.2 7.2.8.8 1.5 2.5 1.5 5.1V22"/></svg>
-               </div>
-            </div>
+            <p className="text-sm text-black/40 mt-4">
+              Copyright © {new Date().getFullYear()} Nudigo Inc. All rights reserved.
+            </p>
           </div>
 
           <div>
-            <h4 className="font-semibold tracking-tight text-sm mb-6 text-black">Product</h4>
+            <h4 className="font-semibold tracking-tight text-sm mb-6 text-black">Links</h4>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-black/60 hover:text-black transition-colors text-sm">Home</Link></li>
-              <li><Link href="#features" className="text-black/60 hover:text-black transition-colors text-sm">Features</Link></li>
-              <li><Link href="#pricing" className="text-black/60 hover:text-black transition-colors text-sm">Pricing</Link></li>
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">Changelog</Link></li>
+              <li><Link href="/sign-in" className="text-black/60 hover:text-black transition-colors text-sm">Login</Link></li>
+              <li><Link href="/#pricing" className="text-black/60 hover:text-black transition-colors text-sm">Pricing</Link></li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold tracking-tight text-sm mb-6 text-black">Company</h4>
-            <ul className="space-y-4">
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">About</Link></li>
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">Blog</Link></li>
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">Careers</Link></li>
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">Contact</Link></li>
-            </ul>
-          </div>
 
           <div>
             <h4 className="font-semibold tracking-tight text-sm mb-6 text-black">Legal</h4>
             <ul className="space-y-4">
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">Terms of Service</Link></li>
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-black/60 hover:text-black transition-colors text-sm">Cookie Policy</Link></li>
+              <li><Link href="/terms" className="text-black/60 hover:text-black transition-colors text-sm">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="text-black/60 hover:text-black transition-colors text-sm">Privacy Policy</Link></li>
+              <li><Link href="/cookie" className="text-black/60 hover:text-black transition-colors text-sm">Cookie Policy</Link></li>
             </ul>
           </div>
 
         </div>
 
         <div className="mt-16 pt-8 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-black/40">
-            Copyright © {new Date().getFullYear()} Nudigo Inc. All rights reserved.
-          </p>
+          <div className="bg-black/5 rounded-xl p-4 border border-black/5 inline-flex items-center gap-3 overflow-hidden -ml-4">
+            <div className="w-10 h-10 rounded-full overflow-hidden shrink-0">
+              <Image src={profileImg} alt="Keerthan MS" className="w-full h-full object-cover" />
+            </div>
+            <p className="text-sm text-black/60 whitespace-nowrap">
+              Hey Curious 👋 I'm Keerthan, the creator of Nudigo. You can follow my work on <a href="https://x.com/kxrthan" target="_blank" rel="noopener noreferrer" className="text-black font-bold hover:underline decoration-black/30 underline-offset-2">Twitter</a>.
+            </p>
+          </div>
           <div className="flex items-center gap-2 text-sm text-black/40">
-            <span>Designed in California</span>
+            <span>Designed by Keerthan MS</span>
           </div>
         </div>
       </div>
