@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import profileImg from "@/assets/Profile-img (1).jpg";
+import profileImg from "@/Assets/Profile-img (1).jpg";
 
 export function Footer() {
   return (
